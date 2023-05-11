@@ -1,49 +1,48 @@
 package stacksAndQueuesLab;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class MathPotato07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-        String names = scanner.nextLine();
+        String [] names = scanner.nextLine().split("\\s+");
         int number = Integer.parseInt(scanner.nextLine());
 
-        ArrayDeque<String> queue=new ArrayDeque<>();
+        PriorityQueue<String> queue = new PriorityQueue<>();
+        Collections.addAll(queue,names);
 
-        Arrays.stream(names.split("\\s+")).forEach(n->queue.offer(n));
-
-        int round = 1;
-
-
+        int currentName = 1;
         while (queue.size()>1){
 
-            for (int i = 1; i < number; i++) {
-                queue.offer(queue.poll());
-            }
-            if (isPrime(round)) {
+            for (int i = 1; i <number; i++) {
+                String kids = queue.poll();
+                queue.offer(kids);
 
-                System.out.println("Prime " + queue.peek());
+            }
+            if (isPrime(currentName)){
+                System.out.println("Prime "+queue.peek());
             }
             else {
-                System.out.println("Removed " + queue.poll());
+                String removeKid = queue.poll();
+                System.out.println("Removed " + removeKid);
             }
-            round++;
-
+            currentName++;
         }
-        System.out.println("Last is " + queue.peek());
+        System.out.println("Last is " + queue.poll());
+
+
+
+
+
 
     }
-    private  static boolean isPrime(int round){
-
-        if (round==1){
-            return  false;
+    private static boolean isPrime(int num){
+        if (num==1){
+            return false;
         }
-        for (int i = 2; i <round ; i++) {
-            if (round % i==0){
+        for (int i = 2; i <num ; i++) {
+            if (num%i==0){
                 return false;
             }
 
