@@ -16,6 +16,24 @@
             }
         }
     }
+
+
+
+
+Char матрица:
+
+        char [][] matrix = new char[size][size];
+        
+        for (int row = 0; row <size ; row++) {   //пълнене на char матрица
+            String rowContent = scanner.nextLine();//"M--"
+            char [] symbolRow = rowContent.toCharArray();// ["M" "-" "-"]
+            matrix[row] = symbolRow;
+        }
+
+
+
+
+
 	
 	private static void fillMatrix(String[][] matrix, Scanner scanner) {
         for (int row = 0; row < matrix.length ; row++) {
