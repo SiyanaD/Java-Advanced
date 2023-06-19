@@ -33,8 +33,8 @@ public class P02MouseAndCheese {
                 }
             }
         }
-        String input = scanner.nextLine();
 
+        String input = scanner.nextLine();
         while (!input.equals("end")) {
             matrix[mouseRow][mouseCol] = '-';//когато мишката се мести на текущото и място слагаме -
 
@@ -59,7 +59,8 @@ public class P02MouseAndCheese {
                 //If the mouse moves to cheese, it eats the cheese and increases the cheese it has eaten by one
                 eatenCheese++;
             } else if (matrix[mouseRow][mouseCol]=='B') {
-                //If it goes to a bonus, the mouse gets a bonus one move forward and then the bonus disappears
+                //If it goes to a bonus, the mouse gets a bonus
+                // one move forward and then the bonus disappears
                 continue;
             }
             //ако са валидни реда и колоната на мишката слагаме 'M'

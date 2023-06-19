@@ -56,6 +56,7 @@ public class P02StickyFingers {
                     }
                     break;
                 case "up":
+
                     if (rowThief - 1 < 0) {
                         //излизам от матрицата
                         System.out.println("You cannot leave the town, there is police outside!");

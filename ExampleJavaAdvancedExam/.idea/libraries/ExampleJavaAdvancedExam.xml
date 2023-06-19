@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ExampleJavaAdvancedExam">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03. Clothes-Magazine-Skeleton.zip!/" />
+      <root url="jar://$PROJECT_DIR$/03. SoftUni-Students-Skeleton.zip!/" />
+      <root url="jar://$PROJECT_DIR$/03. Grooming Salon_Skeleton.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

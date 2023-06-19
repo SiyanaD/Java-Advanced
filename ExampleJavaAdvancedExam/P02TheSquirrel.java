@@ -47,8 +47,6 @@ public class P02TheSquirrel {
             } else if (direction.equals("down")) {
                 squirrelRow++;
             }
-
-
             if (squirrelRow < 0 || squirrelRow >= size || squirrelCol < 0 || squirrelCol >= size) {
                 isTrap=true;
                 System.out.println("The squirrel is out of the field.");
